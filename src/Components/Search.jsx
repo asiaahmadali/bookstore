@@ -6,11 +6,11 @@ import SwiPer from "./Slider";
 function Search() {
   const [search, setSearch] = useState("");
   const [booksData, setBooksData] = useState([]);
-
+  const baseUrl1 = import.meta.env.VITE_BOOK;
   const SearchBook = (e) => {
     if (e.key === "Enter") {
       const apidata = axios.get(
-        "https://www.googleapis.com/books/v1/volumes?q=" +
+        `${baseUrl1}` +
           search +
           "&key=AIzaSyAQbMjjErLzuM2G-YaK1BUUON-rzMSmj2Q" +
           "&maxResults=40"
