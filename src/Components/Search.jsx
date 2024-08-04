@@ -2,7 +2,7 @@ import { FaSearch } from "react-icons/fa";
 import Card from "./Card";
 import { useState } from "react";
 import axios from "axios";
-import SwiPer from "./Swiper";
+import SwiPer from "./Slider";
 function Search() {
   const [search, setSearch] = useState("");
   const [booksData, setBooksData] = useState([]);
