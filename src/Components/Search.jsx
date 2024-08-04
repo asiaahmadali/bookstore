@@ -8,7 +8,7 @@ function Search() {
   const [booksData, setBooksData] = useState([]);
   const baseUrl1 = import.meta.env.VITE_BOOK_API;
   const SearchBook = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" || e.type === "click") {
       const apidata = axios.get(
         `${baseUrl1}` +
           search +
@@ -36,9 +36,12 @@ function Search() {
               className="outline-none"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              onKeyPress={SearchBook}
+              onKeyDown={SearchBook}
             />
-            <FaSearch className="w-[20px] h-[20px] cursor-pointer"></FaSearch>
+            <FaSearch
+              className="w-[20px] h-[20px] cursor-pointer"
+              onClick={SearchBook}
+            ></FaSearch>
           </div>
         </div>
       </div>
