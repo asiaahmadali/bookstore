@@ -6,7 +6,7 @@ import SwiPer from "./Slider";
 function Search() {
   const [search, setSearch] = useState("");
   const [booksData, setBooksData] = useState([]);
-  const baseUrl1 = import.meta.env.VITE_BOOK;
+  const baseUrl1 = import.meta.env.VITE_BOOK_API;
   const SearchBook = (e) => {
     if (e.key === "Enter") {
       const apidata = axios.get(
