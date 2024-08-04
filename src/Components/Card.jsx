@@ -1,5 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 function Card(Props) {
   const books = Props.booksdata;
+  const navigate = useNavigate();
   console.log(books);
   return (
     <>
@@ -8,7 +11,6 @@ function Card(Props) {
           item.volumeInfo.imageLinks &&
           item.volumeInfo.imageLinks.smallThumbnail;
 
-        // let price = item.saleInfo.listPrice && item.saleInfo.listPrice.amount;
         let title = item.volumeInfo.title;
 
         if (imageSource != undefined) {
@@ -17,6 +19,9 @@ function Card(Props) {
               <div
                 className=" flex flex-col items-center justify-center border-2 border-purple-200 m-4 p-3 shadow-md shadow-purple-600 bg-purple-300"
                 key={item.id}
+                onClick={() => {
+                  navigate("itemInfo", { state: { bookItem: item } });
+                }}
               >
                 <img src={imageSource} alt="" className="w-[200px] h-[200px]" />
                 <div className="flex flex-col items-center">

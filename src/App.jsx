@@ -1,14 +1,14 @@
-import Home from "./Components/Home-Page";
-import About from "./Components/About";
-import Search from "./Components/Search";
+import ItemInfo from "./Components/ItemInfo";
+import { Routes, Route } from "react-router-dom";
+import BookStore from "./Components/BookStore";
+
 function App() {
   return (
     <>
-      <div className="p-2">
-        <Home></Home>
-        <About></About>
-        <Search></Search>
-      </div>
+      <Routes>
+        <Route path="/" element={<BookStore></BookStore>}></Route>
+        <Route path="/itemInfo" element={<ItemInfo></ItemInfo>}></Route>
+      </Routes>
     </>
   );
 }
