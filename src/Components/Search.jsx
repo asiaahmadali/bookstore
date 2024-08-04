@@ -2,7 +2,7 @@ import { FaSearch } from "react-icons/fa";
 import Card from "./Card";
 import { useState } from "react";
 import axios from "axios";
-
+import SwiPer from "./Swiper";
 function Search() {
   const [search, setSearch] = useState("");
   const [booksData, setBooksData] = useState([]);
@@ -42,8 +42,8 @@ function Search() {
           </div>
         </div>
       </div>
-
-      <div className="flex justify-center items-center">
+      <SwiPer></SwiPer>
+      <div className="flex justify-center items-center mt-8">
         <div className="grid grid-cols-1 gap-4 w-[80%] md:grid-cols-2 lg:grid-cols-4">
           {<Card booksdata={booksData}></Card>}
         </div>

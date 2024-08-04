@@ -1,10 +1,9 @@
 function About() {
   return (
-    <div className="md:flex md:gap-[100px] md:items-center p-4">
+    <div className="md:flex md:gap-[100px] md:items-center p-4 bg-gradient-to-r from-indigo-400 via-white to-indigo-400">
       <img src="images/bg2.png" alt="" className="max-w-200px h-200px" />
       <div>
-        <h1 className="font-medium text-2xl text-blue-600 m-3">
-          {" "}
+        <h1 className="font-medium  text-xl md:text-2xl text-blue-600 m-3">
           A Room Without Books Is Like A Body Without Soul
         </h1>
         <p>
