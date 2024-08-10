@@ -11,7 +11,7 @@ import { Pagination } from "swiper/modules";
 function SwiPer() {
   return (
     <>
-      <div className="flex justify-center items-center w-full bg-gradient-to-r from-purple-500 via-pink-300 to-purple-500 py-10">
+      <div className=" flex justify-center items-center w-full bg-gradient-to-r from-purple-500 via-pink-300 to-purple-500 py-10">
         <div className="p-3 w-[70%] md:w-[80%] lg:w-[90%] bg-white rounded-lg shadow-lg relative">
           <Swiper
             slidesPerView={2}
