@@ -17,7 +17,7 @@ function SwiPer() {
             slidesPerView={2}
             spaceBetween={20}
             pagination={{
-              clickable: true,
+              clickable: true ,
               el: ".swiper-pagination", // Ensure correct pagination selector
             }}
             breakpoints={{
